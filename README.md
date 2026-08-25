@@ -1,37 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Vanta 3D Studio Landing Page
+
+An immersive studio landing page built with Next.js and Three.js. The hero presents an animated orbital sculpture alongside the Vanta studio message, with a responsive layout for desktop and mobile screens.
+
+![Vanta 3D studio landing page](<public/Screenshot 2026-08-25 at 6.11.21 PM.png>)
+
+## Features
+
+- Animated Three.js orbital sculpture with a lime core, wireframe shell, rings, lighting, and stars
+- Pointer movement subtly changes the sculpture's rotation
+- Pause and resume control for the WebGL animation
+- Responsive hero layout that stacks the scene below the copy on smaller screens
+- Studio navigation, project call-to-action, and about statement sections
+
+## Tech Stack
+
+- [Next.js](https://nextjs.org/) 16 with the App Router
+- [React](https://react.dev/) 19
+- [Three.js](https://threejs.org/)
+- TypeScript
+- Tailwind CSS 4 through PostCSS
 
 ## Getting Started
 
-First, run the development server:
+From this directory, install dependencies and start the development server:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the development server |
+| `npm run build` | Create a production build |
+| `npm run start` | Serve the production build |
+| `npm run lint` | Run ESLint |
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```text
+app/
+	page.tsx       # Landing page and Three.js scene
+	globals.css    # Layout and scene styles
+	layout.tsx     # Root layout and metadata
+public/          # Static assets, including the project screenshot
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The primary page and WebGL scene live in [`app/page.tsx`](app/page.tsx). The scene is created in a client component so Three.js can use the browser's WebGL environment safely.
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 # ThreeBoilerplate
